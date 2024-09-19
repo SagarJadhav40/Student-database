@@ -1,0 +1,63 @@
+<html>
+<head>
+
+
+
+
+
+
+
+
+
+<script>
+
+
+function adjust(obj)
+{
+if(obj.name == "b1")
+{
+document.test.action = "stud.jsp";
+return true;
+}
+if(obj.name == "b2")
+{
+document.test.action = "viewdata.jsp";
+
+return true;
+}
+if(obj.name == "b3")
+{
+document.test.action = "delete.jsp";
+
+return true;
+}
+if(obj.name == "b4")
+{
+document.test.action = "update.jsp";
+
+return true;
+}
+if(obj.name == "b5")
+{
+document.test.action = "view.jsp";
+
+return true;
+}
+}
+</script>
+</head>
+<body>
+<form name="test" action="" method="POST">
+<table>
+<tr><td>RNO</td><td><input type="text" name="rno" id="rno"></td></tr>
+<tr><td>Student Name</td><td><input type="text" name="sname" id="sname"></td></tr>
+<tr><td>Marks</td><td><input type="text" name="marks" id="marks"></td></tr>
+<tr><td><input type="submit" value="Save" name="b1" id="b1" onClick="return adjust(this);"></td>
+<td><input type="submit" value="View Table" name="b2" id="b2" onClick="return adjust(this);"></td>
+<td><input type="submit" value="Delete" name="b3" id="b3" onClick="return adjust(this);"></td>
+<td><input type="submit" value="Update" name="b4" id="b4" onClick="return adjust(this);"></td>
+<td><input type="submit" value="View " name="b5" id="b5" onClick="return adjust(this);"></td></tr>
+</table> 
+</form>
+</body>
+</html>
